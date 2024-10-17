@@ -1,0 +1,6 @@
+@AbbitInc.ComponentService_HostAddress = http://localhost:5245
+
+GET {{AbbitInc.ComponentService_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
