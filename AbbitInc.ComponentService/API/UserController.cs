@@ -18,7 +18,7 @@ namespace AbbitInc.ComponentService.API
 
         public UserController(IUserRepository userRepository, ILogger<UserController> logger)
         {
-            _userRepository = userRepository;
+            _userRepository = userRepository;//userRepository is a private field of type IUserRepository
             _logger = logger;
         }
 
