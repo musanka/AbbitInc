@@ -1,0 +1,22 @@
+1.check all sp for errors
+2. find what to do   with  @ChangedBy = @ChangedBy,
+3. do i need id after update  
+ -- Update AURel (Address/User Relationship) if EntityID and UserType are provided
+                IF @EntityID IS NOT NULL AND @UserType IS NOT NULL
+                BEGIN
+                    UPDATE [dbo].[AURel]
+                    SET
+                        [Active] = ISNULL(@Active, [Active]),
+                        [Deleted] = ISNULL(@Deleted, [Deleted])
+                    WHERE [EID] = @AddressID AND [UserID] = @EntityID AND [UserType] = @UserType;
+
+                    SELECT @AURelID = SCOPE_IDENTITY();
+                END
+4. SET DEFAULT VALUES PÅ ALLE FELTER DER KAN HAVE DET
+
+
+-INSERT PHONE
+UPDATE Address
+
+
+CHECK RELATIONS TABELLER IF THE NAMIONG IS CORRECT, ID OR AURelID???
